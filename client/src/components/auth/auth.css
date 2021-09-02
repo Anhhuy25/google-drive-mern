@@ -1,0 +1,175 @@
+.choose-account-modal,
+.login-modal,
+.register-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fadeIn 0.1s linear;
+  animation: fadeIn 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form,
+.register-form,
+.choose-account {
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  height: 400px;
+  width: 350px;
+  max-width: 620px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 20px 30px;
+}
+
+.username,
+.password {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-login,
+.btn-register {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.link-create-account,
+.link-login-account {
+  text-decoration: none;
+  color: #1a73e8;
+}
+
+/* Choose account */
+.choose-account-user,
+.choose-account-adduser,
+.choose-account-removeuser {
+  width: 100%;
+}
+
+.choose-account-user-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.choose-account-adduser-btn,
+.choose-account-removeuser-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.choose-account-user-btn p:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.choose-account-user-btn .fa-user-circle {
+  margin-right: 8px;
+}
+
+.choose-account-adduser-btn .fa-user-plus,
+.choose-account-removeuser-btn .fa-user-minus {
+  margin-left: 9px;
+  margin-right: 12px;
+}
+
+.choose-account-user-btn:hover,
+.choose-account-adduser-btn:hover,
+.choose-account-removeuser-btn:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.choose-account-removeuserdone-btn {
+  border: none;
+  border-radius: 4px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  color: #1a73e8;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3e3c3c4d;
+  -webkit-animation: fadeIn 0.1s linear;
+  animation: fadeIn 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal {
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  height: 200px;
+  width: 300px;
+  display: grid;
+  place-items: inherit;
+  position: relative;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-btn button {
+  border: none;
+  border-radius: 4px;
+  margin: 0 4px;
+  padding: 8px;
+  color: #1a73e8;
+  cursor: pointer;
+  font-weight: bold;
+}

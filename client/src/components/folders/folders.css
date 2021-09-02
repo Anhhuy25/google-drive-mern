@@ -1,0 +1,335 @@
+/* Modal create folder */
+.modalcreatefolder-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalcreatefolder-title span {
+  color: #222;
+  font-size: 20px;
+}
+
+.modalcreatefolder-text input {
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 4px 8px;
+}
+
+.modalcreatefolder-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalcreatefolder-btncancel {
+  margin: 0 8px;
+  background-color: #fff;
+  color: #202124;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.modalcreatefolder-btncreate {
+  margin: 0 8px;
+  background-color: #4285f4;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Modal Folder In Trash */
+.modalfolderintrash-container {
+  background: #fff;
+  border-radius: 0.25rem;
+  width: 400px;
+  max-width: 620px;
+  display: grid;
+  padding: 20px;
+}
+
+.modalfolderintrash-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.modalfolderintrash-detail {
+  margin: 16px 0;
+}
+
+.modalfolderintrash-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalfolderintrash-btncancel {
+  margin: 0 8px;
+  background-color: #fff;
+  color: #202124;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.modalfolderintrash-btnrestore {
+  margin: 0 8px;
+  background-color: #4285f4;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Create folder */
+.createfolder-title {
+  margin: 24px 12px;
+}
+
+.createfolder-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.createfolder-item {
+  width: 80%;
+  line-height: 48px;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+.createfolder-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 48px;
+  padding: 0 12px;
+}
+
+.createfolder-item div,
+.createfolder-changecolor div {
+  display: flex;
+  align-items: center;
+}
+
+.createfolder-name {
+  font-weight: 600;
+  overflow: hidden;
+  margin-left: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.createfolder-name-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  margin-left: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+/* Deleted Folder */
+.deletedfolders-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.deletedfolders-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedfolders-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.deletedfolders-detail-changecolor {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #e8f0fe;
+}
+
+.deletedfolders-detail svg,
+.deletedfolders-detail-changecolor svg {
+  margin-right: 16px;
+}
+
+.deletedfolders-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.deletedfolders-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.deletedfolders-image {
+  display: flex;
+  justify-content: center;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.deletedfolders-image svg {
+  width: 70px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+/* Add starr folders */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.starredfolders-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.starredfolders-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.starredfolders-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.starredfolders-detail-changecolor {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #e8f0fe;
+}
+
+.starredfolders-detail svg,
+.starredfolders-detail-changecolor svg {
+  margin-right: 16px;
+}
+
+.starredfolders-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.starredfolders-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.starredfolders-image {
+  display: flex;
+  justify-content: center;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.starredfolders-image svg {
+  width: 70px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+/* Modal Progress Upload Inside */
+.modalprogressuploadinside-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  border: 1px solid #ccc;
+  width: 350px;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.modalprogressuploadinside-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #323232;
+  color: #fff;
+  border-radius: 3px 3px 0 0;
+}
+
+.modalprogressuploadinside-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.modalprogressuploadinside-title {
+  display: flex;
+  align-items: center;
+}
+
+.modalprogressuploadinside-title p {
+  margin-left: 8px;
+}

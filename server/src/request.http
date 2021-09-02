@@ -1,0 +1,32 @@
+GET http://localhost:4000/api/auth/users
+
+###
+
+DELETE http://localhost:4000/api/auth/users/60e9971b51b9971f387bceb5
+
+###
+
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "bin",
+  "password": "2525"
+}
+
+### 
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "anhhuy2",
+  "password": "123"
+}
+
+### 
+GET http://localhost:4000/api/posts/my-posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGVjMzQzMzdjYWE4NzBkZjhlZWE5NjEiLCJpYXQiOjE2MjY1MjQ2NDN9.gZQ6zAK08AXHhuu3b4NejdxByIFOAufFi5b-20rxTlQ
+
+###
+DELETE http://localhost:4000/api/posts/60fee26c9cd3570a1cb2f3c4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGVjMzQzMzdjYWE4NzBkZjhlZWE5NjEiLCJpYXQiOjE2MjY1MjQ2NDN9.gZQ6zAK08AXHhuu3b4NejdxByIFOAufFi5b-20rxTlQ

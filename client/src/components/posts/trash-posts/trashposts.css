@@ -1,0 +1,274 @@
+/* Navbar Trash Posts */
+.navbartrashposts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.navbartrashposts-title,
+.navbartrashposts-detail {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.navbartrashposts-title p {
+  margin-right: 8px;
+}
+
+.navbartrashposts-icon {
+  display: flex;
+  align-items: center;
+  height: 21px;
+}
+
+/* Empty Trash */
+.emptytrash-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.emptytrash-img {
+  height: 171px;
+  width: 172px;
+}
+.emptytrash-text p:first-child {
+  margin: 12px 0;
+}
+
+/* Deleted Posts */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.deletedposts-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.deletedposts-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedposts-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedposts-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.deletedposts-detail img {
+  margin-right: 16px;
+}
+
+.deletedposts-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.deletedposts-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.deletedposts-image {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.deletedposts-image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+/* Icon Navbar Trash Post */
+.navbartrashposticon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  position: relative;
+}
+
+.navbartrashposticon-trash,
+.navbartrashposticon-restore {
+  margin: 0 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbartrashposticon-restore p,
+.navbartrashposticon-trash p {
+  display: none;
+}
+
+.navbartrashposticon-restore:hover p {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: -45px;
+  width: 105px;
+  background-color: #5e6065;
+  font-size: 13px;
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.navbartrashposticon-trash:hover p {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: -35px;
+  width: 85px;
+  background-color: #5e6065;
+  font-size: 13px;
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.navbartrashposticon-border {
+  border-right: 1px solid #c1baba;
+  display: inline-block;
+  height: 20px;
+  margin: 3px 8px;
+  vertical-align: middle;
+}
+
+/* Modal Confirm Delete */
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-animation: fadeIn 0.1s linear;
+  animation: fadeIn 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalconfirmdelete-container {
+  background: #fff;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 620px;
+  display: grid;
+  padding: 20px;
+}
+
+.modalconfirmdelete-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #202124;
+  font-weight: 600;
+}
+
+.modalconfirmdelete-description {
+  margin: 10px 0;
+}
+
+.modalconfirmdelete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.modalconfirmdelete-btncancel {
+  padding: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+
+.modalconfirmdelete-btndelete {
+  padding: 12px;
+  margin-left: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #1a73e8;
+  color: #fff;
+  width: 150px;
+  border-radius: 4px;
+}
+
+.modalconfirmdelete-btncancel:hover {
+  color: #3e85e1;
+  background-color: #f2f0f0;
+}
+
+/* Modal Restore */
+.modalrestore-container {
+  position: fixed;
+  bottom: 12px;
+  left: 32px;
+  background-color: #302f2f;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 370px;
+}
+
+.modalrestore-container span {
+  font-size: 17px;
+  color: #fff;
+}
+
+.modalrestore-btnundo {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #7ecffa;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.modalrestore-btnclose {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: transparent;
+  color: #ccc;
+}

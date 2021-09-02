@@ -1,0 +1,179 @@
+/* Navbar Search Posts */
+.navbarsearchposts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.navbarsearchposts-title,
+.navbarsearchposts-detail {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.navbarsearchposts-title p {
+  margin-right: 8px;
+}
+
+.navbarsearchposts-icon {
+  display: flex;
+  align-items: center;
+  height: 21px;
+}
+
+/* Empty Search */
+.emptysearch-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.emptysearch-img {
+  height: 171px;
+  width: 172px;
+}
+.emptysearch-text p:first-child {
+  margin: 12px 0;
+}
+
+/* Result Search Posts */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.search-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.search-detail img {
+  margin-right: 16px;
+}
+
+.search-detail svg {
+  margin-right: 16px;
+}
+
+.search-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.search-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.search-image {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.search-image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.search-image svg {
+  width: 70px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+/* Icon Navbar Search Post */
+.navbarsearchposts-icon {
+  display: flex;
+  align-items: center;
+  height: 21px;
+}
+
+.navbarsearchpostsicon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  position: relative;
+}
+
+.navbarsearchpostsicon-trash,
+.navbarsearchpostsicon-moreactions {
+  margin: 0 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbarsearchpostsicon-moreactions p,
+.navbarsearchpostsicon-trash p {
+  display: none;
+}
+
+.navbarsearchpostsicon-moreactions:hover p {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: -28px;
+  width: 77px;
+  background-color: #5e6065;
+  font-size: 13px;
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.navbarsearchpostsicon-trash:hover p {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  width: 52px;
+  background-color: #5e6065;
+  font-size: 13px;
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.navbarsearchpostsicon-border {
+  border-right: 1px solid #c1baba;
+  display: inline-block;
+  height: 20px;
+  margin: 3px 8px;
+  vertical-align: middle;
+}

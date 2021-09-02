@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  animation: spinner 0.6s linear infinite;
+}
+
+.alert-msg,
+.alert-confirm-msg {
+  color: #f00;
+}

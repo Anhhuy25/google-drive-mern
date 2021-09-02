@@ -1,0 +1,599 @@
+/* Navbar Inside */
+.navbarinside-container {
+  position: relative;
+}
+
+.navbarinside-active {
+  background-color: #e8f0fe;
+  border-radius: 0 28px 28px 0;
+}
+
+.navbarinside-active-color {
+  color: #1967d6;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbarinside-active-color svg {
+  margin-right: 12px;
+}
+
+.navbarinside-uploadtable {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 200px;
+  background-color: #fff;
+  z-index: 999;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #777373;
+}
+
+.navbarinside-file-upload,
+.navbarinside-mydrive {
+  padding: 12px 16px;
+}
+
+.navbarinside-starred,
+.navbarinside-trash {
+  padding: 12px 19px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.navbarinside-file-upload-btn {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 28px;
+  width: 55%;
+}
+
+.navbarinside-file-upload-btn svg {
+  margin-right: 8px;
+}
+
+.navbarinside-file-upload-label svg,
+.navbarinside-mydrive-link svg {
+  margin-right: 12px;
+}
+
+.navbarinside-starred-link .fa-star {
+  margin-right: 16px;
+}
+
+.navbarinside-trash-link .fa-trash-alt {
+  margin-right: 18px;
+  margin-left: 2px;
+}
+
+.navbarinside-mydrive-link,
+.navbarinside-starred-link,
+.navbarinside-trash-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbarinside-uploadtable-createfolder {
+  margin-top: 8px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.navbarinside-uploadtable-uploadfile,
+.navbarinside-uploadtable-uploadfolder {
+  font-size: 18px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.navbarinside-uploadtable-uploadfile label,
+.navbarinside-uploadtable-uploadfolder label {
+  cursor: pointer;
+}
+
+.navbarinside-uploadtable-createfolder .fa-folder-plus,
+.navbarinside-uploadtable-uploadfile .fa-upload,
+.navbarinside-uploadtable-uploadfolder .fa-upload {
+  margin-right: 12px;
+}
+
+.navbarinside-uploadtable-createfolder:hover,
+.navbarinside-uploadtable-uploadfile:hover,
+.navbarinside-uploadtable-uploadfolder:hover {
+  background-color: #e2dfdf;
+}
+
+/* Navbar Posts Inside */
+.navbarpostsinside-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.navbarpostsinside-uploadtable,
+.navbarpostsinside-detail {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.navbarpostsinside-uploadtable span {
+  margin-right: 8px;
+}
+
+.navbarpostsinside-icon {
+  display: flex;
+  align-items: center;
+  height: 21px;
+}
+
+/* DAD Inside Folder */
+.dadinsidefolders-body {
+  min-height: 100vh;
+  min-width: 430px;
+  position: relative;
+}
+
+.dadinsidefolders-container {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 430px;
+}
+
+.dadinsidefolders-detail {
+  border-radius: 50%;
+  background-color: rgba(185, 70, 70, 0.04);
+  height: 430px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 430px;
+}
+
+.dadinsidefolders-img {
+  position: absolute;
+  top: 123px;
+  left: 115px;
+}
+
+.dadinsidefolders-description {
+  color: #5f6368;
+  margin-top: 32px;
+  text-align: center;
+  position: absolute;
+  top: 300px;
+  left: 135px;
+}
+
+/* Uploaded Posts Inside */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.uploadedpostsinside-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.uploadedpostsinside-title {
+  margin: 24px 12px;
+}
+
+.uploadedpostsinside-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.uploadedpostsinside-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.uploadedpostsinside-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.uploadedpostsinside-detail img {
+  margin-right: 16px;
+}
+
+.uploadedpostsinside-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.uploadedpostsinside-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.uploadedpostsinside-image {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.uploadedpostsinside-image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+/* Deleted Inside FPs */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.deletedInsideFPs-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.deletedInsideFPs-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedInsideFPs-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedInsideFPs-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.deletedInsideFPs-detail img {
+  margin-right: 16px;
+}
+
+.deletedInsideFPs-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.deletedInsideFPs-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.deletedInsideFPs-image {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.deletedInsideFPs-image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+/* Add Starr Inside Folders Posts */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.starredInsideFPs-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.starredInsideFPs-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.starredInsideFPs-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.starredInsideFPs-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.starredInsideFPs-detail img {
+  margin-right: 16px;
+}
+
+.starredInsideFPs-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.starredInsideFPs-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.starredInsideFPs-image {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.starredInsideFPs-image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+/* Create Folders Inside */
+.createfoldersinside-title {
+  margin: 24px 12px;
+}
+
+.createfoldersinside-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.createfoldersinside-item {
+  width: 80%;
+  line-height: 48px;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+.createfoldersinside-changecolor {
+  background-color: #e8f0fe;
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 48px;
+  padding: 0 12px;
+}
+
+.createfoldersinside-item div,
+.createfoldersinside-changecolor div {
+  display: flex;
+  align-items: center;
+}
+
+.createfoldersinside-name {
+  font-weight: 600;
+  overflow: hidden;
+  margin-left: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.createfoldersinside-name-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  margin-left: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+/* Modal Create Folder */
+.modalcreatefolder-container {
+  background: #fff;
+  border-radius: 0.25rem;
+  width: 400px;
+  max-width: 620px;
+  display: grid;
+  padding: 20px;
+}
+
+/* Deleted Folder Inside */
+.deletedInsideFFs-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.deletedInsideFFs-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deletedInsideFFs-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.deletedInsideFFs-detail-changecolor {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #e8f0fe;
+}
+
+.deletedInsideFFs-detail svg,
+.deletedInsideFFs-detail-changecolor svg {
+  margin-right: 16px;
+}
+
+.deletedInsideFFs-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.deletedInsideFFs-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.deletedInsideFFs-image {
+  display: flex;
+  justify-content: center;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.deletedInsideFFs-image svg {
+  width: 70px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+/* Add starr folders inside */
+.grid.narrow {
+  max-width: 830px;
+}
+
+.starredInsideFFs-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.starredInsideFFs-item {
+  width: 80%;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.starredInsideFFs-detail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.starredInsideFFs-detail-changecolor {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #e8f0fe;
+}
+
+.starredInsideFFs-detail svg,
+.starredInsideFFs-detail-changecolor svg {
+  margin-right: 16px;
+}
+
+.starredInsideFFs-filename {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000b8;
+  font-size: 15px;
+}
+
+.starredInsideFFs-filename-changecolor {
+  font-weight: 600;
+  overflow: hidden;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1967d2;
+  font-size: 15px;
+}
+
+.starredInsideFFs-image {
+  display: flex;
+  justify-content: center;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.starredInsideFFs-image svg {
+  width: 70px;
+  height: 140px;
+  border-radius: 8px;
+}
