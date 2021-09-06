@@ -7,6 +7,11 @@ import xlsx from "../images/excel.png";
 
 export const apiUrl = "http://localhost:4000/api";
 
+export const apiUrl =
+  process.env.NODE_ENV !== "production"
+    ? "http://localhost:4000/api"
+    : "https://secret-lowlands-12440.herokuapp.com/api";
+
 export const LOCAL_STORAGE_TOKEN_NAME = "mern_project";
 export const SET_AUTH = "SET_AUTH";
 export const RETURN_LOGIN = "RETURN_LOGIN";
