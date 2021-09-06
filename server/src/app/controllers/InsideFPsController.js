@@ -72,7 +72,7 @@ class InsideFPsController {
       res.json({ success: true, insideFolders_Posts });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -158,7 +158,7 @@ class InsideFPsController {
       }
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -232,7 +232,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -271,7 +271,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -318,7 +318,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -341,7 +341,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -365,7 +365,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -380,7 +380,7 @@ class InsideFPsController {
       res.json({ success: true, deletedInsideFPs });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -394,7 +394,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -409,7 +409,7 @@ class InsideFPsController {
       res.json({ success: true, starredInsideFPs });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -427,7 +427,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -445,7 +445,7 @@ class InsideFPsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 }

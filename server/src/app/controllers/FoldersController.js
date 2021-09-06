@@ -34,7 +34,7 @@ class FoldersController {
       res.json({ success: true, folders });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -70,7 +70,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -94,7 +94,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -119,7 +119,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -132,7 +132,7 @@ class FoldersController {
       res.json({ success: true, deletedFolders });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -156,7 +156,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -173,7 +173,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -187,7 +187,7 @@ class FoldersController {
       res.json({ success: true, starredFolders });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -205,7 +205,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -223,7 +223,7 @@ class FoldersController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 }

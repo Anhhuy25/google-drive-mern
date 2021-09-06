@@ -13,9 +13,7 @@ class AuthController {
       res.json({ success: true, user });
     } catch (error) {
       console.log(error);
-      res
-        .status(500)
-        .json({ success: false, message: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -26,7 +24,7 @@ class AuthController {
       res.json({ success: true, users });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -39,7 +37,7 @@ class AuthController {
       res.json({ success: true, users });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -51,7 +49,7 @@ class AuthController {
       res.json({ success: true, users });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -84,7 +82,7 @@ class AuthController {
       res.json({ success: true, msg: "Register successfully!" });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -125,7 +123,7 @@ class AuthController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 }

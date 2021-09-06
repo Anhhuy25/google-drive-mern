@@ -282,27 +282,23 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.navbar-uploadtable-uploadfile,
-.navbar-uploadtable-uploadfolder {
+.navbar-uploadtable-uploadfile {
   font-size: 18px;
   padding: 12px 16px;
   cursor: pointer;
 }
 
-.navbar-uploadtable-uploadfile label,
-.navbar-uploadtable-uploadfolder label {
+.navbar-uploadtable-uploadfile label {
   cursor: pointer;
 }
 
 .navbar-uploadtable-createfolder .fa-folder-plus,
-.navbar-uploadtable-uploadfile .fa-upload,
-.navbar-uploadtable-uploadfolder .fa-upload {
+.navbar-uploadtable-uploadfile .fa-upload {
   margin-right: 12px;
 }
 
 .navbar-uploadtable-createfolder:hover,
-.navbar-uploadtable-uploadfile:hover,
-.navbar-uploadtable-uploadfolder:hover {
+.navbar-uploadtable-uploadfile:hover {
   background-color: #e2dfdf;
 }
 

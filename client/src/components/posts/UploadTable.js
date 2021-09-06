@@ -60,14 +60,6 @@ function UploadTable({ modalRef }) {
           onChange={fileChange}
         />
       </div>
-
-      <div className="navbar-uploadtable-uploadfolder">
-        <label htmlFor="folder-upload">
-          <i className="fa fa-upload" aria-hidden="true"></i>
-          <span>Folder upload</span>
-        </label>
-        <input type="file" name="myFolder" id="folder-upload" />
-      </div>
     </div>
   );
 }

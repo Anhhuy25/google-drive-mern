@@ -69,7 +69,7 @@ class PostsController {
       res.json({ success: true, posts });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -139,7 +139,7 @@ class PostsController {
       }
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -218,7 +218,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -265,7 +265,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -313,7 +313,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -334,7 +334,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -356,7 +356,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Interal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -369,7 +369,7 @@ class PostsController {
       res.json({ success: true, deletedPosts });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -383,7 +383,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -397,7 +397,7 @@ class PostsController {
       res.json({ success: true, starredPosts });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -415,7 +415,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 
@@ -433,7 +433,7 @@ class PostsController {
       });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ success: false, msg: "Internal server error" });
+      res.status(500).json({ success: false, msg: error });
     }
   }
 }
