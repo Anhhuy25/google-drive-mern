@@ -16,6 +16,7 @@ function Posts() {
   useEffect(() => {
     getAllPosts();
     getAllFolders();
+    // eslint-disable-next-line
   }, []);
 
   if (postsLoading && foldersLoading) {

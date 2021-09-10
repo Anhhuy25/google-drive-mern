@@ -46,6 +46,7 @@ function HomeSearchLogOut() {
     } else {
       setModalResult(false);
     }
+    // eslint-disable-next-line
   }, [debounceSearchValue]);
 
   useEffect(() => {

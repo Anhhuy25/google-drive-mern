@@ -37,6 +37,7 @@ function DADInsideFolders() {
       setShowModalUploadInside(true);
       handleUploadPost(acceptedFiles[0]);
     }
+    // eslint-disable-next-line
   }, [insideDADFile, onFileDDInsideFolders, setShowModalUploadInside]);
 
   return (
@@ -48,7 +49,7 @@ function DADInsideFolders() {
               <img
                 className="dadinsidefolders-img"
                 src="https://i.stack.imgur.com/c6hIh.png"
-                alt="image-upload"
+                alt=""
               />
               {/* <div className="dadinsidefolders-img"></div> */}
               <div className="dadinsidefolders-description">

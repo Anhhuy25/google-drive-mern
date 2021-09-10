@@ -34,6 +34,7 @@ function DragAndDrop() {
       setShowModalUpload(true);
       handleUploadPost(acceptedFiles[0]);
     }
+    // eslint-disable-next-line
   }, [dragDropFile, onFileDragDrop, setShowModalUpload]);
 
   return (

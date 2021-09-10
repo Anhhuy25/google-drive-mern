@@ -18,6 +18,7 @@ function Trash() {
     setNavValue("Trash");
     // getDeletedInsideFPs();
     // getDeletedInsideFFs();
+    // eslint-disable-next-line
   }, []);
 
   return (

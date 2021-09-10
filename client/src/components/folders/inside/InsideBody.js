@@ -21,6 +21,7 @@ function InsideBody({ id }) {
   useEffect(() => {
     getInsideFoldersAllPosts();
     getInsideFoldersAllFolders();
+    // eslint-disable-next-line
   }, []);
 
   if (insideFoldersPostsLoading && insideFoldersFoldersLoading) {

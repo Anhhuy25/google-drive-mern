@@ -57,6 +57,7 @@ function IconNavbarPost() {
       // Cleanup the event listener
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
+    // eslint-disable-next-line
   }, [showMoreActions]);
 
   return (

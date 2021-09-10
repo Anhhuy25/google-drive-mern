@@ -18,6 +18,7 @@ function Starred() {
     getStarredInsideFPs();
     getStarredInsideFFs();
     setNavValue("Starred");
+    // eslint-disable-next-line
   }, []);
 
   return (

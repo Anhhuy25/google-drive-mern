@@ -10,6 +10,7 @@ function Search() {
 
   useEffect(() => {
     searchFile();
+    // eslint-disable-next-line
   }, []);
 
   return (

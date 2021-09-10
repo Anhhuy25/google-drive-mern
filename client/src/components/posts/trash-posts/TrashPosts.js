@@ -29,6 +29,7 @@ function TrashPosts() {
   useEffect(() => {
     getDeletedPosts();
     getDeletedFolders();
+    // eslint-disable-next-line
   }, []);
 
   if (

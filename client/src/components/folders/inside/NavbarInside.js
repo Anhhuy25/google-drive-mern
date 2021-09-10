@@ -26,6 +26,7 @@ function NavbarInside({ id }) {
       // Cleanup the event listener
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
+    // eslint-disable-next-line
   }, [showModalInside]);
 
   return (

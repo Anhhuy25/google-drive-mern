@@ -163,6 +163,7 @@ const PostsProvider = ({ children }) => {
       console.log(error);
     }
     setSelectedFile(null);
+    // eslint-disable-next-line
   }, [selectedFile]);
 
   // Keep separate file
@@ -197,6 +198,7 @@ const PostsProvider = ({ children }) => {
       await getAllPosts();
     }
     setDragDropFile(null);
+    // eslint-disable-next-line
   }, [dragDropFile]);
 
   // Search file
@@ -567,6 +569,7 @@ const PostsProvider = ({ children }) => {
       }
       setSelectedFile(null);
     },
+    // eslint-disable-next-line
     [selectedFile]
   );
 
@@ -602,6 +605,7 @@ const PostsProvider = ({ children }) => {
       await getInsideFoldersAllPosts();
     }
     setInsideDADFile(null);
+    // eslint-disable-next-line
   }, [insideDADFile]);
 
   // Update file
