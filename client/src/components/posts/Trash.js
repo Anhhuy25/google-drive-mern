@@ -8,16 +8,16 @@ function Trash() {
     getDeletedPosts,
     getDeletedFolders,
     setNavValue,
-    // getDeletedInsideFPs,
-    // getDeletedInsideFFs,
+    getDeletedInsideFPs,
+    getDeletedInsideFFs,
   } = useGlobalContext();
 
   useEffect(() => {
     getDeletedPosts();
     getDeletedFolders();
+    getDeletedInsideFPs();
+    getDeletedInsideFFs();
     setNavValue("Trash");
-    // getDeletedInsideFPs();
-    // getDeletedInsideFFs();
     // eslint-disable-next-line
   }, []);
 

@@ -15,17 +15,19 @@ function ModalConfirmDelete() {
     deleteInsideFFs,
   } = useGlobalContext();
 
-  const deleteForever = async (id) => {
+  const deleteForever = async () => {
     try {
       if (isPost) {
-        await deletePost(id);
-      } else {
-        await deleteFolder(id);
+        await deletePost(info._id);
       }
-      if (isInsideFP) {
-        await deleteInsideFoldersPost(id);
-      } else {
-        await deleteInsideFFs(id);
+      if (!isPost && info.parent) {
+        await deleteFolder(info._id);
+      }
+      if (isInsideFP && info.children) {
+        await deleteInsideFoldersPost(info);
+      }
+      if (!isInsideFP && info.children) {
+        await deleteInsideFFs(info);
       }
       setModalConfirmDelete(false);
       setShowIconNavbarTrashPost(false);
@@ -50,7 +52,7 @@ function ModalConfirmDelete() {
             CANCEL
           </button>
           <button
-            onClick={() => deleteForever(info._id)}
+            onClick={deleteForever}
             className="modalconfirmdelete-btndelete"
           >
             DELETE FOREVER

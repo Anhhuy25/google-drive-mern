@@ -9,6 +9,7 @@ import {
   POSTS_CHANGE_COLOR,
 } from "../../contexts/constants";
 import { useGlobalContext } from "../../contexts/PostsContext";
+import { useGlobalContextAuth } from "../../contexts/AuthContext";
 import ModalSepaOrUpda from "./navbar-post/ModalSepaOrUpda";
 import "../../grid.css";
 import "./posts.css";
@@ -24,6 +25,9 @@ function UploadedPosts() {
     setIsPost,
     setIsDisable,
   } = useGlobalContext();
+  const {
+    authState: { user },
+  } = useGlobalContextAuth();
 
   // One click to change color
   const toggleState = (id, post, icon, type, link) => {
@@ -61,87 +65,92 @@ function UploadedPosts() {
       <div className={`${showDetail ? "grid narrow" : "grid wide"}`}>
         {posts.length > 0 && <h4 className="uploadedposts-title">Files</h4>}
         <div className="uploadedposts-container">
-          {posts.map((post) => {
-            const {
-              _id,
-              fileName,
-              fileImage,
-              filePath,
-              fileLinkDownload,
-              active,
-            } = post;
-            let type = filePath.slice(21).split(".");
-            let pathId = fileImage.slice(38);
-            let fileIcon = null;
-            let fileType = null;
-            switch (type[1]) {
-              case "pdf":
-                fileIcon = PDF_TYPE;
-                fileType = "PDF";
-                break;
-              case "txt":
-                fileIcon = TEXT_TYPE;
-                fileType = "Text";
-                break;
-              case "docx":
-                fileIcon = DOCX_TYPE;
-                fileType = "Word";
-                break;
-              case "doc":
-                fileIcon = DOCX_TYPE;
-                fileType = "Word";
-                break;
-              case "pptx":
-                fileIcon = PPTX_TYPE;
-                fileType = "PowerPoint";
-                break;
-              case "ppt":
-                fileIcon = PPTX_TYPE;
-                fileType = "PowerPoint";
-                break;
-              case "xlsx":
-                fileIcon = XLSX_TYPE;
-                fileType = "Excel";
-                break;
-              default:
-                fileIcon = IMAGE_TYPE;
-                fileType = "Image";
-                break;
-            }
+          {posts
+            .filter((post) => post.user._id === user._id)
+            .map((post) => {
+              const {
+                _id,
+                fileName,
+                fileImage,
+                filePath,
+                fileLinkDownload,
+                active,
+              } = post;
 
-            return (
-              <div
-                className={`${showDetail ? "l-4" : "l-3"}`}
-                key={_id}
-                onClick={() =>
-                  toggleState(_id, post, fileIcon, fileType, fileLinkDownload)
-                }
-                onDoubleClick={() => openPost(pathId)}
-              >
+              let type = filePath.slice(21).split(".");
+              let pathId = fileImage.slice(38);
+              let fileIcon = null;
+              let fileType = null;
+              switch (type[1]) {
+                case "pdf":
+                  fileIcon = PDF_TYPE;
+                  fileType = "PDF";
+                  break;
+                case "txt":
+                  fileIcon = TEXT_TYPE;
+                  fileType = "Text";
+                  break;
+                case "docx":
+                  fileIcon = DOCX_TYPE;
+                  fileType = "Word";
+                  break;
+                case "doc":
+                  fileIcon = DOCX_TYPE;
+                  fileType = "Word";
+                  break;
+                case "pptx":
+                  fileIcon = PPTX_TYPE;
+                  fileType = "PowerPoint";
+                  break;
+                case "ppt":
+                  fileIcon = PPTX_TYPE;
+                  fileType = "PowerPoint";
+                  break;
+                case "xlsx":
+                  fileIcon = XLSX_TYPE;
+                  fileType = "Excel";
+                  break;
+                default:
+                  fileIcon = IMAGE_TYPE;
+                  fileType = "Image";
+                  break;
+              }
+
+              return (
                 <div
-                  className={`${
-                    active ? "uploadedposts-changecolor" : "uploadedposts-item"
-                  }`}
+                  className={`${showDetail ? "l-4" : "l-3"}`}
+                  key={_id}
+                  onClick={() =>
+                    toggleState(_id, post, fileIcon, fileType, fileLinkDownload)
+                  }
+                  onDoubleClick={() => openPost(pathId)}
                 >
-                  <div className="uploadedposts-image">
-                    <img src={fileImage} alt={fileName} />
-                  </div>
-                  <div className="uploadedposts-detail">
-                    <img src={fileIcon} alt={fileName} />
-                    <p
-                      className={`${
-                        active
-                          ? "uploadedposts-filename-changecolor"
-                          : "uploadedposts-filename"
-                      }`}
-                    >
-                      {fileName}
-                    </p>
+                  <div
+                    className={`${
+                      active
+                        ? "uploadedposts-changecolor"
+                        : "uploadedposts-item"
+                    }`}
+                  >
+                    <div className="uploadedposts-image">
+                      <img src={fileImage} alt={fileName} />
+                    </div>
+                    <div className="uploadedposts-detail">
+                      <img src={fileIcon} alt={fileName} />
+                      <p
+                        className={`${
+                          active
+                            ? "uploadedposts-filename-changecolor"
+                            : "uploadedposts-filename"
+                        }`}
+                      >
+                        {fileName}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
 

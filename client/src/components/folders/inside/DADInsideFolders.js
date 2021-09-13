@@ -5,7 +5,7 @@ import { INSIDEFOLDERS_UPLOAD } from "../../../contexts/constants";
 import UploadPostsInside from "./UploadPostsInside";
 import "./inside.css";
 
-function DADInsideFolders() {
+function DADInsideFolders({ id }) {
   const {
     postsState: { insideFolders_Posts },
     dispatch,
@@ -33,7 +33,7 @@ function DADInsideFolders() {
 
   useEffect(() => {
     if (insideDADFile) {
-      onFileDDInsideFolders();
+      onFileDDInsideFolders(id);
       setShowModalUploadInside(true);
       handleUploadPost(acceptedFiles[0]);
     }

@@ -142,17 +142,11 @@ class InsideFFsController {
   async deleteInsideFoldersFolders(req, res) {
     try {
       const folderDeletedCondition = { _id: req.params.id, user: req.userId };
-      const deleteFolder = await InsideFF.deleteOne(folderDeletedCondition);
+      await InsideFF.deleteOne(folderDeletedCondition);
 
-      if (!deleteFolder)
-        return res.status(401).json({
-          success: false,
-          msg: "Folder not found or user not authorised",
-        });
       res.json({
         success: true,
         msg: "Delete folder successfully!",
-        folder: deleteFolder,
       });
     } catch (error) {
       console.log(error);

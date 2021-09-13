@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useGlobalContext } from "../../../contexts/PostsContext";
 import DeletedFolders from "../../folders/DeletedFolders";
 import Loading from "../../views/Loading";
@@ -19,18 +19,14 @@ function TrashPosts() {
       deletedInsideFPs,
       deletedInsideFFs,
     },
-    // getDeletedInsideFFs,
-    // getDeletedInsideFPs,
-    getDeletedPosts,
-    getDeletedFolders,
   } = useGlobalContext();
   let body = null;
 
-  useEffect(() => {
-    getDeletedPosts();
-    getDeletedFolders();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   // getDeletedPosts();
+  //   // getDeletedFolders();
+  //   // eslint-disable-next-line
+  // }, []);
 
   if (
     deletedPostsLoading &&

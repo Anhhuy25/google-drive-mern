@@ -157,7 +157,6 @@ const PostsProvider = ({ children }) => {
         } else {
           await getAllPosts();
         }
-        // await getAllPosts();
       }
     } catch (error) {
       console.log(error);
@@ -592,21 +591,25 @@ const PostsProvider = ({ children }) => {
   };
 
   // Drag and drop file
-  const onFileDDInsideFolders = useCallback(async () => {
-    const formData = new FormData();
+  const onFileDDInsideFolders = useCallback(
+    async (id) => {
+      const formData = new FormData();
 
-    if (insideDADFile) {
-      formData.append("myFileInside", insideDADFile);
-      await axios.post(
-        `${apiUrl}/insidefoldersposts/insidefolders-myposts/create-post`,
-        formData,
-        progressBarChange
-      );
-      await getInsideFoldersAllPosts();
-    }
-    setInsideDADFile(null);
+      if (insideDADFile) {
+        formData.append("myFileInside", insideDADFile);
+        formData.append("folderId", id);
+        await axios.post(
+          `${apiUrl}/insidefoldersposts/insidefolders-myposts/create-post`,
+          formData,
+          progressBarChange
+        );
+        await getInsideFoldersAllPosts();
+      }
+      setInsideDADFile(null);
+    },
     // eslint-disable-next-line
-  }, [insideDADFile]);
+    [insideDADFile]
+  );
 
   // Update file
   const updateInsideFoldersPosts = async (file, name) => {
@@ -668,10 +671,10 @@ const PostsProvider = ({ children }) => {
   };
 
   // Delete post
-  const deleteInsideFoldersPost = async (id) => {
+  const deleteInsideFoldersPost = async (info) => {
     try {
       await axios.delete(
-        `${apiUrl}/insidefoldersposts/insidefolders-myposts/my-trash/${id}`
+        `${apiUrl}/insidefoldersposts/insidefolders-myposts/my-trash/${info._id}`
       );
       await getDeletedInsideFPs();
     } catch (error) {

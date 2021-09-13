@@ -241,20 +241,6 @@ class InsideFPsController {
     try {
       const { query } = req.body;
 
-      // Tim kiem file theo real google drive
-      // let pageToken = null;
-      // let querySearch =
-      //   "name contains '" +
-      //   query +
-      //   "' and trashed = false and " +
-      //   "not mimeType = 'application/vnd.google-apps.folder'";
-      // const result = await drive.files.list({
-      //   q: querySearch,
-      //   fields: "nextPageToken, files(id, name), files/parents",
-      //   spaces: "drive",
-      //   pageToken,
-      // });
-
       const arr = await insideFP
         .find({
           user: req.userId,
@@ -348,20 +334,14 @@ class InsideFPsController {
   // DELETE /insidefolders-myposts/my-trash/:id
   async deleteInsideFoldersPosts(req, res) {
     try {
-      const deletePost = await insideFP.deleteOne({
+      await insideFP.deleteOne({
         _id: req.params.id,
         user: req.userId,
       });
 
-      if (!deletePost)
-        return res.status(401).json({
-          success: false,
-          msg: "Post not found or user not authorised",
-        });
       res.json({
         success: true,
         msg: "Delete post successfully!",
-        post: deletePost,
       });
     } catch (error) {
       console.log(error);

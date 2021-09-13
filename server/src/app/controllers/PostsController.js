@@ -24,7 +24,6 @@ const fileSizeFormatter = (bytes, decimal) => {
 };
 
 let nameFile = "";
-
 const checkPostExist = (arr, name) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === name) {
@@ -86,8 +85,8 @@ class PostsController {
     }
 
     try {
-      const listPosts = await Post.find({});
-      const listNames = listPosts.map((post) => post.fileName);
+      const listPostsById = await Post.find({ user: req.userId });
+      const listNames = listPostsById.map((post) => post.fileName);
       const valueCheck = checkPostExist(listNames, fileUpload.originalname);
 
       if (valueCheck) {
@@ -160,9 +159,8 @@ class PostsController {
       });
       await separateFilePost.save();
 
-      const listPosts = await Post.find({});
+      const listPosts = await Post.find({ user: req.userId });
       const listNames = listPosts.map((post) => post.fileName);
-
       // Dem so luong file trung ten voi file upload
       const count = countDocuments(listNames, separateFilePost.fileName);
 
@@ -192,19 +190,8 @@ class PostsController {
       });
       const id = result.data.webViewLink.slice(32, 65);
 
-      // const id = separateFilePost.fileImage.slice(38);
-      // var copyRequest = {
-      //   // Modified
-      //   name: separateFilePost.fileName + ` (${count - 1})`,
-      //   parents: [],
-      // };
-      // await drive.files.copy({
-      //   fileId: id,
-      //   requestBody: copyRequest, // or resource: copyRequest
-      // });
-
       // Sau khi luu du lieu vao database thi thay doi ten cua file
-      const query = { fileName: separateFilePost.fileName };
+      const query = { user: req.userId, fileName: separateFile.fileName };
       await Post.findOneAndUpdate(query, {
         fileName: separateFilePost.fileName + ` (${count - 1})`,
         fileImage: `https://drive.google.com/thumbnail?id=${id}`,
@@ -226,20 +213,6 @@ class PostsController {
   async searchPost(req, res) {
     try {
       const { query } = req.body;
-
-      // Tim kiem file theo real google drive
-      // let pageToken = null;
-      // let querySearch =
-      //   "name contains '" +
-      //   query +
-      //   "' and trashed = false and " +
-      //   "not mimeType = 'application/vnd.google-apps.folder'";
-      // const result = await drive.files.list({
-      //   q: querySearch,
-      //   fields: "nextPageToken, files(id, name), files/parents",
-      //   spaces: "drive",
-      //   pageToken,
-      // });
 
       // Search posts
       const arrPost = await Post.find({
@@ -342,17 +315,11 @@ class PostsController {
   async deletePost(req, res) {
     try {
       const postDeletedCondition = { _id: req.params.id, user: req.userId };
-      const deletePost = await Post.deleteOne(postDeletedCondition);
+      await Post.deleteOne(postDeletedCondition);
 
-      if (!deletePost)
-        return res.status(401).json({
-          success: false,
-          msg: "Post not found or user not authorised",
-        });
       res.json({
         success: true,
         msg: "Delete post successfully!",
-        post: deletePost,
       });
     } catch (error) {
       console.log(error);
