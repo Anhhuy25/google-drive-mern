@@ -5,7 +5,7 @@ import docx from "../images/word.png";
 import pptx from "../images/powerpoint.png";
 import xlsx from "../images/excel.png";
 
-export const apiUrl = "http://localhost:4000/api";
+export const apiUrl = "https://secret-lowlands-12440.herokuapp.com/api";
 
 // export const apiUrl =
 //   process.env.NODE_ENV !== "production"
