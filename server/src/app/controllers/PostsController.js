@@ -113,7 +113,7 @@ class PostsController {
           fields: "webViewLink, webContentLink",
         });
 
-        const id = result.data.webViewLink.slice(32, 65);
+        const id = result.data.webContentLink.slice(31, 64);
         await drive.permissions.create({
           fileId,
           requestBody: {
@@ -163,6 +163,12 @@ class PostsController {
       const listNames = listPosts.map((post) => post.fileName);
       // Dem so luong file trung ten voi file upload
       const count = countDocuments(listNames, separateFilePost.fileName);
+
+      const arr = await Post.find({
+        user: req.userId,
+        fileName: separateFile.fileName,
+      });
+      console.log(arr);
 
       // Khi separate file thi tao ben google drive 1 file nhu vay
       // Nhung khi download ve thi file se co dinh dang chua xac dinh
