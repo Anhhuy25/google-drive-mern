@@ -164,12 +164,6 @@ class PostsController {
       // Dem so luong file trung ten voi file upload
       const count = countDocuments(listNames, separateFilePost.fileName);
 
-      const arr = await Post.find({
-        user: req.userId,
-        fileName: separateFile.fileName,
-      });
-      console.log(arr);
-
       // Khi separate file thi tao ben google drive 1 file nhu vay
       // Nhung khi download ve thi file se co dinh dang chua xac dinh
       const response = await drive.files.create({
@@ -194,7 +188,7 @@ class PostsController {
           type: "anyone",
         },
       });
-      const id = result.data.webViewLink.slice(32, 65);
+      const id = result.data.webContentLink.slice(31, 64);
 
       // Sau khi luu du lieu vao database thi thay doi ten cua file
       const query = { user: req.userId, fileName: separateFile.fileName };

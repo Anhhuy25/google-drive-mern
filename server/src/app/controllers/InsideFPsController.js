@@ -91,12 +91,15 @@ class InsideFPsController {
 
     try {
       // Tim danh sach ten tat ca cac post, roi kiem tra
-      const listPosts = await insideFP.find({});
+      const listPosts = await insideFP.find({
+        user: req.userId,
+        folder: folderId,
+      });
       const listNames = listPosts.map((post) => post.fileName);
       const valueCheck = checkPostExist(listNames, fileUpload.originalname);
 
       // Tim danh sach id tat ca folder, roi lay ra id phu hop
-      const listFolders = await Folder.find({});
+      const listFolders = await Folder.find({ user: req.userId });
       const listIds = listFolders.map((folder) => folder._id.toString());
       const findFolderIdExist = listIds.find((id) => id === folderId);
 
@@ -128,7 +131,7 @@ class InsideFPsController {
           fields: "webViewLink, webContentLink",
         });
 
-        const id = result.data.webViewLink.slice(32, 65);
+        const id = result.data.webContentLink.slice(31, 64);
         await drive.permissions.create({
           fileId,
           requestBody: {
@@ -215,7 +218,7 @@ class InsideFPsController {
           type: "anyone",
         },
       });
-      const id = result.data.webViewLink.slice(32, 65);
+      const id = result.data.webContentLink.slice(31, 64);
 
       // Sau khi luu du lieu vao database thi thay doi ten cua file
       const query = { fileName: separateFileInsideFP.fileName };

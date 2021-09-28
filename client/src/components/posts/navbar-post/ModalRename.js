@@ -7,7 +7,6 @@ function ModalRename() {
     info,
     setModalRename,
     updatePost,
-    setShowMoreActions,
     updateInsideFoldersPosts,
     isPost,
     isInsideFP,
@@ -34,8 +33,6 @@ function ModalRename() {
         await updateInsideFFs(info, name);
       }
       setModalRename(false);
-      setShowMoreActions(false);
-      setName("");
     } catch (error) {
       console.log(error);
     }
