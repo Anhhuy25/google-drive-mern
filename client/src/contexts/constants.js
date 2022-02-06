@@ -10,7 +10,7 @@ import xlsx from "../images/excel.png";
 export const apiUrl =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:4000/api"
-    : "https://pacific-island-43834.herokuapp.com/api";
+    : "https://still-fortress-50174.herokuapp.com/api";
 
 export const LOCAL_STORAGE_TOKEN_NAME = "mern_project";
 export const SET_AUTH = "SET_AUTH";
