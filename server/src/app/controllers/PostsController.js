@@ -3,10 +3,6 @@ const Folder = require("../models/Folder");
 const { google } = require("googleapis");
 const fs = require("fs");
 
-// Link lấy token khi hết hạn: (1 tuần)
-// https://console.cloud.google.com/apis/credentials/oauthclient/131805264054-mtf8o5v5dalrirats7nqag1bdjbf65ar.apps.googleusercontent.com?project=mern-project-320213&supportedpurview=project
-// https://developers.google.com/oauthplayground
-
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
